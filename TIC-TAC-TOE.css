@@ -22,13 +22,7 @@ width: 100px;
 border-radius: 10px;
 font-size: 40px;
 font-weight: bold;
-opacity: 0.8; /* 60% visible */
-
-    /* background-image: url(t.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #ffffff; */
+opacity: 0.8; 
 color: black;
 
 }
