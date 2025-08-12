@@ -2,14 +2,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    /* background-color: blue; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(t1.png);
     height: 100vh;
 }
 
 .game {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-gap: rem; */
+    /* grid-gap: none; */
         
    
 }
@@ -17,6 +20,26 @@ body {
 height: 100px;
 width: 100px;
 border-radius: 10px;
-background-color: #ffffff;
+font-size: large;
+font-weight: bold;
+opacity: 0.6; /* 60% visible */
+
+    /* background-image: url(t.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff; */
 color: black;
+}
+.reset{
+    background-color: red;
+    color: white;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+.restart{
+    background-color: green;
+    color: white;
+    margin-left: 120px;
+    margin-bottom: 20px;
 }
