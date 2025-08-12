@@ -20,9 +20,9 @@ body {
 height: 100px;
 width: 100px;
 border-radius: 10px;
-font-size: large;
+font-size: 40px;
 font-weight: bold;
-opacity: 0.6; /* 60% visible */
+opacity: 0.8; /* 60% visible */
 
     /* background-image: url(t.png);
     background-size: cover;
@@ -30,6 +30,7 @@ opacity: 0.6; /* 60% visible */
     background-position: center;
     background-color: #ffffff; */
 color: black;
+
 }
 .reset{
     background-color: red;

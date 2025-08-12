@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // your Tic-Tac-Toe JS code here
+});
+
 let currentPlayer = true;
 let winnerboard = [
     [0,1,2],
@@ -11,6 +15,7 @@ let winnerboard = [
 ]
 let result=document.getElementById("result");
 let btn = document.querySelectorAll(".button");
+let winnerfound = false;
 btn.forEach((button)=>{
     button.addEventListener('click',(event )=>{
         if(currentPlayer){
@@ -20,21 +25,34 @@ btn.forEach((button)=>{
         }
         currentPlayer = !currentPlayer;
         button.disabled = true;
-        for(let board of winnerboard){
-        let[a,b,c]=board;
+        for(let pattern of winnerboard){
+        let[a,b,c]=pattern;
         if(btn[a].textContent === "X" && btn[b].textContent === "X" && btn[c].textContent === "X"){
-              result.textContent = "Player X wins!";
+            alert("Player X wins!");
               btn.forEach(b => b.disabled = true)
-              break;
+              
         }else if(btn[a].textContent === "O" && btn[b].textContent === "O" && btn[c].textContent === "O"){
-            result.textContent = "Player O wins!";
+    
               btn.forEach(b => b.disabled = true)
-              break;
+            alert("Player O wins!");
         }
         
     }
+    if ( !winnerfound) {
+        let filledCount = 0;
+for (let i = 0; i < btn.length; i++) {
+    if (btn[i].textContent !== "") {
+        filledCount++;
+    }
+}
+if (filledCount === btn.length && result.textContent === "") {
+    alert("It's a Tie!");
+}}
     })
+
 })
+
+
 let resetButton = document.querySelectorAll(".reset");
 resetButton.forEach(button => {
     button.addEventListener('click', () => {
