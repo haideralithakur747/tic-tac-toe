@@ -1,4 +1,5 @@
 let currentPlayer = true;
+
 let winnerboard = [
   [0, 1, 2],
   [3, 4, 5],
@@ -29,7 +30,7 @@ btn.forEach((button) => {
         btn[b].textContent === "X" &&
         btn[c].textContent === "X"
       ) {
-        alert("Player X wins!");
+        document.getElementById("result").textContent = "Player X wins!";
         btn.forEach((b) => (b.disabled = true));
         winnerfound = true;
         break;
@@ -39,7 +40,7 @@ btn.forEach((button) => {
         btn[c].textContent === "O"
       ) {
         btn.forEach((b) => (b.disabled = true));
-        alert("Player O wins!");
+        document.getElementById("result").textContent = "Player O wins!";
         winnerfound = true;
         break;
       }
@@ -52,7 +53,7 @@ btn.forEach((button) => {
         }
       }
       if (filledCount === btn.length) {
-        alert("It's a Tie!");
+        document.getElementById("result").textContent = "It's a Tie!";
       }
     }
   });
@@ -74,8 +75,10 @@ restartButton.forEach((button) => {
   button.addEventListener("click", () => {
     btn.forEach((b) => {
       b.textContent = "";
+
       b.disabled = false;
     });
+            result.textContent = "";
     currentPlayer = true;
     winnerfound = false;
   });
